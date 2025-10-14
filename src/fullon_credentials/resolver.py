@@ -37,19 +37,24 @@ class FullonCredentials:
 
         return secret, key
 
+def fullon_credentials(exchange_obj) -> Tuple[str, str]:
+      """
+      Get credentials for exchange.
 
-def fullon_credentials(ex_id: int) -> Tuple[str, str]:
-    """
-    Get credentials for exchange ID.
+      Args:
+          exchange_obj: Exchange ORM model OR integer ex_id
 
-    Args:
-        ex_id: Exchange ID from fullon_orm
+      Returns:
+          Tuple of (secret, key)
+      """
+      # Handle both Exchange object and raw ex_id
+      if hasattr(exchange_obj, 'ex_id'):
+          ex_id = exchange_obj.ex_id
+      else:
+          ex_id = exchange_obj
 
-    Returns:
-        Tuple of (secret, key)
-    """
-    resolver = FullonCredentials(ex_id)
-    return resolver._env_lookup()
+      resolver = FullonCredentials(ex_id)
+      return resolver._env_lookup()
 
 
 

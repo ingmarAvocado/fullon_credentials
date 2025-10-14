@@ -1,9 +1,9 @@
 [project]
 name = "fullon-credentials"
-version = "0.1.1"
+version = "0.1.2"
 description = "Secure credential resolver service for fullon ecosystem with Google Secrets Manager and .env fallback"
 authors = [
-    {name = "ingmar", email = "ingmar@avocadoblock.com"}
+    {name = "Ingmar Frey", email = "ingmar.frey@gmail.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.13,<4.0"
