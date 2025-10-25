@@ -1,6 +1,6 @@
 [project]
 name = "fullon-credentials"
-version = "0.1.2"
+version = "0.1.3"
 description = "Secure credential resolver service for fullon ecosystem with Google Secrets Manager and .env fallback"
 authors = [
     {name = "Ingmar Frey", email = "ingmar.frey@gmail.com"}
